@@ -211,9 +211,9 @@ function update(self)
 
     render.enable_state(render.STATE_DEPTH_TEST)
     render.disable_state(render.STATE_STENCIL_TEST)
-    render.set_depth_mask(false)
+    -- render.set_depth_mask(false) -- for test with Spine
     render.draw(predicates.player, camera_world.frustum)
-    render.set_depth_mask(true)
+    -- render.set_depth_mask(true) -- for test with Spine
 
     render.draw(predicates.particle, camera_world.frustum)
     render.disable_state(render.STATE_DEPTH_TEST)
