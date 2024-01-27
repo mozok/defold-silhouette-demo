@@ -2,7 +2,7 @@
 title = silhouette-demo
 
 [bootstrap]
-main_collection = /main/simple-example/main.collectionc
+main_collection = /main/base-example/main.collectionc
 render = /render/default.renderc
 
 [input]
