@@ -45,6 +45,7 @@ Example works without an additional stencil mask, but it would have some artifac
 - Spine example
 - Change silhouette color from scripts
 - 3D models example
+- Add menu and HTML5 demo
 
 ## Assets
 
