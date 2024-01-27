@@ -11,7 +11,7 @@ function final(self)
 end
 
 function update(self, dt)
-	msg.post("@render:", "draw_text", { text = "Arrows or WASD to move.", position = vmath.vector3(20, 20, 0) } )
+	msg.post("@render:", "draw_text", { text = "Use WASD to move.", position = vmath.vector3(20, 20, 0) } )
 	
 	-- update player position
 	local pos = go.get_position()
