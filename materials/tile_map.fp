@@ -9,7 +9,7 @@ void main()
     lowp vec4 tint_pm = vec4(tint.xyz * tint.w, tint.w);
     vec4 color = texture2D(texture_sampler, var_texcoord0.xy) * tint_pm;
 
-    if (color.a == 0) discard;
+    if (color.a == 0.0) discard;
 
     gl_FragColor = color;
 }

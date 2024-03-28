@@ -10,7 +10,7 @@ void main()
 
     vec4 color = texture2D(texture_sampler, var_texcoord0.xy) * tint_pm;
 
-    if (color.a == 0) discard;
+    if (color.a == 0.0) discard;
 
     gl_FragColor = color;
 }

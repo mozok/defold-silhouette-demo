@@ -26,7 +26,7 @@ void main()
 
     lowp vec4 color = face_color + outline_color + shadow_color;
 
-    if (color.a == 0.) discard;
+    if (color.a == 0.0) discard;
 
     gl_FragColor = color;
 }
