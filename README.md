@@ -27,6 +27,7 @@ All changes are made inside the `update` function. Key points:
 Example works without an additional stencil mask, but it would have some artifacts.
 
 ### Demo examples:
+- [Check HTML5 demo](https://mozok.github.io/defold-silhouette-demo/)
 - base-example - show simple configuration with 3 sprites on different z-position and a background.
 - simple-example - has a tilemap with several objects on it and a hero. Hero move script changes his z-position according to y-position. All objects has their own z-position.
 
