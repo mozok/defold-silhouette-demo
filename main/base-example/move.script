@@ -37,7 +37,9 @@ end
 
 function on_input(self, action_id, action)
 	if action_id then
-		if action.pressed then
+		if action.pressed and action_id == hash("key_esc") then
+			msg.post("controller:/root", "show_menu")
+		elseif action.pressed then
 			self.input[action_id] = true
 		elseif action.released then
 			self.input[action_id] = false

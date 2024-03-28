@@ -1,0 +1,17 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function final(self)
+	msg.post(".", "release_input_focus")
+end
+
+function on_input(self, action_id, action)
+	if action.pressed then
+		if gui.pick_node(gui.get_node("button_base/bg"), action.x, action.y) then
+			msg.post("controller:/root", "show_base_example")
+		elseif gui.pick_node(gui.get_node("button_simple/bg"), action.x, action.y) then
+			msg.post("controller:/root", "show_simple_example")
+		end
+	end
+end

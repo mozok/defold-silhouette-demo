@@ -1,0 +1,27 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	msg.post("#menu_proxy", "load")
+	self.loaded_example = nil
+end
+
+function final(self)
+	msg.post(".", "release_input_focus")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("show_base_example") then
+		msg.post("#base_exampel_proxy", "load")
+		msg.post("#menu_proxy", "unload")
+		self.loaded_example = "#base_exampel_proxy"
+	elseif message_id == hash("show_simple_example") then
+		msg.post("#simple_example_proxy", "load")
+		msg.post("#menu_proxy", "unload")
+		self.loaded_example = "#simple_example_proxy"
+	elseif message_id == hash("show_menu") then
+		msg.post("#menu_proxy", "load")
+		msg.post(self.loaded_example, "unload")
+		self.loaded_example = nil
+	elseif message_id == hash("proxy_loaded") then
+		msg.post(sender, "enable")
+	end
+end
