@@ -15,6 +15,8 @@ function final(self)
 end
 
 function update(self, dt)
+	msg.post("@render:", "draw_debug_text", { text = "Use WASD to move. ESC to return to menu", position = vmath.vector3(20, 650, 0), color = vmath.vector4(1, 0, 0, 1) } )
+
 	-- update player position
 	local pos = go.get_position()
 	if self.input[hash("key_w")] then

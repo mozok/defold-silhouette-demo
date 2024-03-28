@@ -1,6 +1,7 @@
 go.property("speed", 200)
 
 function init(self)
+	msg.post("@render:", hash("use_fixed_fit_projection"), { near = -1, far = 1 })
 	msg.post(".", "acquire_input_focus")
 
 	self.input = {}
@@ -11,7 +12,7 @@ function final(self)
 end
 
 function update(self, dt)
-	msg.post("@render:", "draw_text", { text = "Use WASD to move.", position = vmath.vector3(20, 20, 0) } )
+	msg.post("@render:", "draw_debug_text", { text = "Use WASD to move. ESC to return to menu", position = vmath.vector3(20, 650, 0), color = vmath.vector4(1, 0, 0, 1) } )
 	
 	-- update player position
 	local pos = go.get_position()
